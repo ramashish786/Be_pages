@@ -24,8 +24,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Graph</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Numerical</a>
+                <li><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Numeric Data
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" onclick="showAll()">All</a>
+                        <a class="dropdown-item"  onclick="showTemp()">Temperature</a>
+                        <a class="dropdown-item"   onclick="showPh()" >Ph Value</a>
+                        <a class="dropdown-item"   onclick="showTb()">Turbidity</a>
+                        <a class="dropdown-item"   onclick="showTds()" >TDS</a>
+                    </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -34,6 +43,7 @@
             </form>
         </div>
     </nav>
+    <div id='d_ifrm'></div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -44,9 +54,62 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-        <script>
-            console.log('ram');
-        </script>
+   <script>
+    
+        //    var alink =  document.getElementById("a_all");
+        //    alink.onclick = function() {myFunction()};
+        //     function myFunction(){
+        //         alink.setAttribute('src','ex05.php');
+
+        //     }
+        //     function myFunction(){
+        //     var frame = document.createElement("iframe");
+        //     frame.setAttribute('src', 'ex05.php');
+        //     frame.setAttribute('border', 'none');
+        //     var element = document.getElementById("d_all");
+        //     element.appendChild(frame);
+        //    }
+            var ifrm = document.createElement("iframe");
+                ifrm.setAttribute('border', 'none');
+                ifrm.setAttribute('height', '100%');
+                ifrm.setAttribute('width', '100%');
+            function showAll(){
+                ifrm.setAttribute('src', 'allvalue.php');
+               
+                document.getElementById("d_ifrm").appendChild(ifrm);
+            }
+            function showTemp(){
+               
+                ifrm.setAttribute('src', 'temp.php');
+               // ifrm.setAttribute('width', '100%');
+                document.getElementById("d_ifrm").appendChild(ifrm);
+            }
+           
+            
+            
+            function showPh()
+            {
+               
+                ifrm.setAttribute('src', 'phvalue.php');
+                document.getElementById("d_ifrm").appendChild(ifrm);
+            }
+            function showTb(){
+                
+             
+                ifrm.setAttribute('src', 'turbidity.php');
+                document.getElementById("d_ifrm").appendChild(ifrm);
+            }
+            function showTds()
+            {
+               
+                ifrm.setAttribute('src', 'tds.php');
+                document.getElementById("d_ifrm").appendChild(ifrm);
+            }
+            
+            
+            
+    
+    </script>
 
 </body>
 
