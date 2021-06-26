@@ -1,1 +1,35 @@
 
+.login-container {
+  position: absolute;
+  left: 450px;
+  top: 150px;
+  width: 400px;
+}
+
+.bg {
+  background: url("../img/back_1.jpg") no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.form-container {
+  border: 1px solid;
+  padding: 50px 60px;
+  margin-top: 20vh;
+  -webkit-box-shadow: -6px 37px 121px 18px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: -6px 37px 121px 18px rgba(0, 0, 0, 0.55);
+  box-shadow: -6px 37px 121px 18px rgba(0, 0, 0, 0.55);
+  border-radius: 1%;
+}
+
+.bg label {
+  color: #fff;
+}
+.bg p {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+}
